@@ -1,0 +1,2 @@
+# toy_second_hand_trading_applet
+基于微信小程序云开发的二手玩具交易平台
