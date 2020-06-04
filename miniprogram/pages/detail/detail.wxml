@@ -1,0 +1,46 @@
+<view class="detail_container">
+    <view class="top">
+        <image bindtap="preImage" class="top_image" src="{{toyDetail.imageUrl}}" mode="aspectFill" lazy-load="true">
+            
+        </image>
+        <view class="top_item public_flex" style="font-size:40rpx;font-weight:bold;justify-content:space-between;">
+            <view>{{toyDetail.goodName}}</view>
+            <view class="top_collect" bindtap="doCollect">
+               <!-- 收藏按钮 -->
+               {{isCollected?"取消收藏":"收藏"}}
+            </view>
+        </view>
+        <view class="top_item" style="color:rgb(78,78,78);border-top: 1px solid #eee;">
+            {{toyDetail.goodDescript}}
+        </view>
+        <view class="top_auth">
+            <view class="auth_left">
+                <view>
+                    {{toyDetail.storeInfo.storeName}}
+                </view>
+            </view>
+            <view class="auth_right">
+                <image class="auth_phone" bindtap="callPhone" src="/images/phone.png">     
+                </image>
+            </view>
+        </view>
+        <view class="top_auth" bindtap="toAddress">
+            <view class="auth_left">
+                <view>
+                    {{toyDetail.storeInfo.address.address}}
+                </view>
+            </view>
+            <view class="auth_right">
+                <image class="auth_address" src="/images/address.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <video class="content_video" src="{{toyDetail.videoUrl}}"/>  
+    </view>
+    <view class="extend">
+        <view class="extend_view" bindtap="toReport">
+            投诉
+        </view>
+    </view>
+</view>

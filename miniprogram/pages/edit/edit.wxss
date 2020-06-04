@@ -1,0 +1,99 @@
+.edit_container{
+    width: 100%;
+    padding: 0 20rpx 40rpx 20rpx;
+    background-color: #f4f4f4;
+}
+.edit_box{
+    background-color: #fff;
+    border-radius: 12rpx;
+    overflow: hidden;
+    border: 1px solid #f4f4f4;
+}
+.edit_title{
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    color: #727272;
+    padding-left: 20rpx;
+}
+.edit_box .edit_text{
+    padding:  0 30rpx;
+    border-bottom: 1px solid #f4f4f4;
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edit_box .edit_text:nth-last-child(1){
+    border-bottom: 1px solid transparent;
+}
+.edit_box .edit_left{
+    display: flex;
+    align-items: center;
+}
+.edit_box .edit_right{
+    display: flex;
+    align-items: center;
+}
+.edit_left .edit_fir{
+    font-size: 28rpx;
+}
+.edit_right .edit_sec{
+    font-size: 28rpx;
+    color: #999;
+}
+.edit_limit{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
+}
+.edit_right .edit_nav{
+    margin-left: 10rpx;
+    width: 14rpx;
+    height: 28rpx;
+    transform: rotate(180deg);
+}
+.edit_right .edit_address{
+    margin-left: 10rpx;
+    width: 20rpx;
+    height: 28rpx;
+}
+.edit_right .edit_input{
+    font-size: 28rpx;
+    text-align: right;
+}
+.edit_right .edit_input_place{
+    font-size: 28rpx;
+    color: #f4f4f4;
+}
+.edit_button{
+    padding: 0px!important;
+    margin: 20rpx auto 0 auto!important;
+    position: static!important;
+    width: 710rpx!important;
+    left:20rpx;
+    font-size: 32rpx;
+    color: #fff;
+    height: 88rpx;
+    line-height: 88rpx!important;
+    text-align: center;
+    bottom:128rpx;
+    border-radius: 12rpx;
+    background-color: #1E89E4;
+}
+.edit_button_home{
+    margin: 20rpx auto 0 auto;
+    /* position: relative; */
+    width: 710rpx;
+    left:20rpx;
+    font-size: 32rpx;
+    border: 1px solid #1E89E4;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    bottom:20rpx;
+    border-radius: 12rpx;
+    color: #1E89E4;
+}

@@ -1,0 +1,29 @@
+<view class="index_container">
+    <!-- 展示所有玩具种类 -->
+    <scroll-view class="index_scroll_view" scroll-x="true">
+        <view class="scroll_item {{isAll?'scroll_item_focus':''}}" bindtap="loadToyList">
+             全部
+          </view>
+        <block wx:for="{{typeList}}" wx:key="index">
+          <view class="scroll_item {{item.value == curType ? 'scroll_item_focus':''}}" data-index="{{index}}" bindtap="selectType" >
+              {{item.name}}
+          </view>
+        </block>              
+    </scroll-view>
+    <!-- 展示所有玩具 -->
+    <view class="index_list">
+      <block wx:for="{{toyList}}" wx:key="index">
+        <view class="list_item" hover-class="list_item_hover" bindtap="toDetail" data-item="{{item}}">
+            <image class="item_image" src="{{item.imageUrl}}" mode="aspectFill"></image>
+            <view class="item_content">
+                <view class="content_title">
+                    {{item.goodName}}
+                </view>
+                <view class="content_address">
+                    {{item.goodDescript}}
+                </view>
+            </view>
+        </view>
+      </block>
+    </view>
+</view>

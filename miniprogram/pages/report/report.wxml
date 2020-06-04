@@ -1,0 +1,10 @@
+<view class="report_container">
+    <textarea class="report_text" placeholder="请输入举报内容" placeholder-class="textarea-placeholder" bindinput="setText" maxlength="-1"  auto-height="true" >
+    </textarea>
+    <view class="report_add">
+      <image class="report_image" bindtap="upLoadImage" src="{{image==null?'/images/add_avatar.png':image}}" />
+    </view>
+    <view class="edit_button" bindtap="startReport">
+        确定举报
+    </view>
+</view>

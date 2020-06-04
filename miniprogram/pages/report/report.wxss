@@ -1,0 +1,39 @@
+
+.report_container{
+    width: 100%;
+    padding: 20rpx;
+}
+.report_text{
+    box-sizing: border-box;
+    font-size: 28rpx;
+    border: 1px solid #eee;
+    padding: 20rpx;
+    border-radius: 12rpx;
+    width: 100%;
+    color: #999;
+    min-height: 360rpx;
+}
+.report_add{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 300rpx;
+}
+.report_image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.edit_button{
+    width: 710rpx;
+    margin-top: 20rpx;
+    font-size: 32rpx;
+    color: #fff;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    bottom:20rpx;
+    border-radius: 12rpx;
+    background-color: #1E89E4;
+}
+.edit_button_hover{
+    background-color: rgb(35, 118, 190);
+}

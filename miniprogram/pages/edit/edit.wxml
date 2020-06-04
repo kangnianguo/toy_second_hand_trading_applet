@@ -1,0 +1,120 @@
+<view class="edit_container">
+    <view wx:if="{{!haveStoreMessage}}">
+        <view class="edit_title">
+                完善必要信息
+        </view>
+        <!-- 店铺信息 -->
+        <view class="edit_box">
+            <block wx:for="{{storeMessage}}" wx:key="index">
+                <view class="edit_text">
+                    <view class="edit_left">
+                        <view class="edit_fir">
+                    {{item}}
+                        </view>
+                    </view>
+                    <view class="edit_right">
+                        <input class="edit_input" maxlength="18" bindinput="setInput" data-type="{{enStoreMessage[index]}}"  placeholder="请输入{{item}}"/>
+                    </view>
+                </view>
+                
+            </block>
+            <!-- 店铺地址栏 -->
+           <view class="edit_text">
+                <view class="edit_left">
+                    <view class="edit_fir">
+                        店铺地址
+                    </view>
+                </view>
+                <view class="edit_right" bindtap="chooseAddress">
+                    <view class="edit_sec edit_limit" bindinput="setInput" data-type="address" style="max-width:460rpx;">
+                        {{toyInfo.address.name?toyInfo.address.name:'选择地址'}}
+                    </view>
+                    <image class="edit_address" src="/images/address.png">
+                    </image>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <!-- 商品信息 -->
+    <view class="edit_title">
+        发布商品
+    </view>
+    <view class="edit_box">
+        <view class="edit_text">
+            <view class="edit_left">
+                <view class="edit_fir">
+                    商品名称
+                </view>
+            </view>
+            <view class="edit_right">
+                <input value="{{toyInfo.name}}" bindinput="setInput" data-type="name" class="edit_input" placeholder="请输入商品名称"/>
+            </view>
+        </view>
+        <view class="edit_text">
+            <view class="edit_left">
+                <view class="edit_fir">
+                    商品分类
+                </view>
+            </view>
+            <view class="edit_right">
+                <!-- 要显示名字 range-key -->
+                <picker class="edit_sec" mode="selector" range="{{typeList}}"  range-key="name" value="{{chooseTypeIndex}}" 
+                     bindchange="chooseType" bindtap="setInput" data-type="typesIndex">
+                    {{typeList[chooseTypeIndex].name}}
+                </picker>
+                <image class="edit_nav" src="/images/back.png">
+                </image>
+            </view>
+        </view>
+        <view class="edit_text">
+            <view class="edit_left">
+                <view class="edit_fir">
+                    商品描述
+                </view>
+            </view>
+            <view class="edit_right">
+                <input bindinput="setInput" value="{{toyInfo.goodDescript}}" data-type="goodDescript" class="edit_input" placeholder="请输入商品描述"/>
+            </view>
+        </view>
+        <view class="edit_text">
+            <view class="edit_left">
+                <view class="edit_fir">
+                    商品图片
+                </view>
+            </view>
+            <view class="edit_right" bindtap="upLoadImage">
+                <view class="edit_sec">
+                    {{toyInfo.imageUrl?'图片已上传':'添加图片'}}
+                </view>
+                <image class="edit_nav" src="/images/back.png">
+                </image>
+            </view>
+        </view>
+        <view class="edit_text">
+            <view class="edit_left">
+                <view class="edit_fir">
+                    商品视频
+                </view>
+            </view>
+            <view class="edit_right" bindtap="upLoadVideo">
+                <view class="edit_sec">
+                    {{toyInfo.videoUrl?'视频已上传':'添加视频'}}
+                </view>
+                <image class="edit_nav" src="/images/back.png">
+                </image>
+            </view>
+        </view>
+    </view>
+    <!-- 按钮 -->
+    <button wx:if="{{!isAuthorized}}" class="edit_button" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+        授权登陆
+    </button>
+    <view wx:else class="edit_button" bindtap="postMessage">
+        确认发布
+    </view>
+    <view class="edit_button_home" bindtap="toIndex">
+        返回主页
+    </view>
+    
+</view>

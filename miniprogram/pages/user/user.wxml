@@ -1,0 +1,57 @@
+<view class="user_container">
+  <view class="top">
+    <button open-type="getUserInfo" bindgetuserinfo="getuserInfo" bindtap="onGetOpenid">
+      <image class="top_avatar" src="{{avatarUrl?avatarUrl:'/images/avatar.png'}}"></image>
+      <view class="top_nickName">{{userInfo.nickName?userInfo.nickName:'点击头像授权登陆'}}</view>
+    </button>
+  </view>
+  <view class="collections" wx:if="{{isManager}}">
+    <view class="collection_title" wx:if="{{isManager}}">
+      举报列表
+    </view>
+    <view class="collection_list" wx:if="{{isManager}}">
+      <block wx:for="{{reports}}" wx:key="index">
+      <view class="list_item" hover-class="list_item_hover">
+            <image bindtap="preImage" class="item_image" data-url="{{item.reportUrl}}" src="{{item.reportUrl}}" mode="aspectFill"></image>
+            <view class="item_content" bindtap="toDetail" data-id="{{item.goodId}}" data-item="{{item}}">
+                <view class="content_title">
+                    #{{index+1}} {{item.goodName}}
+                </view>
+                <view class="content_address">
+                    {{item.reportText}}
+                </view>
+            </view>
+      </view>
+      </block>
+    </view>
+  </view>
+  <view class="collections">
+    <view class="collection_title">
+      我的收藏
+    </view>
+    <view class="collection_list">
+      <block wx:for="{{collects}}" wx:key="index">
+      <view class="list_item" hover-class="list_item_hover" bindtap="toDetail" data-id="{{item.goodId}}" data-item="{{item}}">
+            <!-- <image class="item_image" src="{{item.imageUrl}}" mode="aspectFill"></image> -->
+            <view class="item_content">
+                <view class="content_title">
+                    {{item.goodName}}
+                </view>
+                <view class="content_address">
+                    {{item.storeInfo.storeName}}
+                </view>
+            </view>
+      </view>
+      </block>
+      <!-- <view class="list_item public_flex" hover-class="list_item_hover">
+        <image class="item_avatar" src="" mode="aspectFill" lazy-load="true" binderror="" bindload="">
+          
+        </image>
+        <view class="item_name">
+          王麻子水果批发
+        </view>
+        <image class="item_phone" src="/images/phone.png" />
+      </view> -->
+    </view>
+  </view>
+</view>

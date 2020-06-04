@@ -1,0 +1,100 @@
+page{
+    width: 100%;
+    background-color: #f4f4f4;
+}
+.detail_container{
+    width: 100%;
+    padding-bottom: 60rpx;
+}
+.top{
+    padding: 20rpx;
+    width: 100%;
+    padding-bottom: 20rpx;
+    background-color: #fff;
+}
+.top .top_image{
+    width: 100%;
+    height: 400rpx;
+    background-color: rgb(78, 78, 78);
+}
+.top .top_item{
+    padding: 0 10rpx;
+    margin-top: 10rpx;
+    width: 100%;
+    font-size: 28rpx;
+    min-height: 80rpx;
+    line-height: 80rpx;
+}
+.top .top_auth{
+    color:rgb(78,78,78);
+    min-height: 80rpx;
+    border-top: 1px solid #eee;
+    padding: 0 30rpx 0 10rpx;
+    width: 100%;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top_auth .auth_left{
+    display: flex;
+    align-items: center;
+}
+.top_auth .auth_right{
+    display: flex;
+    align-items: center;
+}
+.auth_right .auth_address{
+    width: 22rpx;
+    height: 30rpx;
+}
+.auth_right .auth_phone{
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 20rpx;
+}
+.content{
+    padding: 20rpx;
+    background-color: #fff;
+    width: 100%;
+}
+.content_video{
+    width: 710rpx;
+    height: 460rpx;
+}
+.extend{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    font-size: 28rpx;
+    color: #999;
+    line-height: 36rpx;
+}
+.top_limit{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
+}
+.top_collect{
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0 20rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: normal;
+    color: #1e89e4;
+    border-radius: 12rpx;
+    border: 1px solid #1E89E4;
+}
+.top_collected{
+    padding: 0 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: normal;
+    color: #fff;
+    background-color: #1e89e4;
+    border-radius: 12rpx;
+}
